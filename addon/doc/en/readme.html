@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Private Eye</title>
+</head>
+<body>
+	<h1>Private Eye</h1>
+	<p>Private Eye is an NVDA global plugin that periodically captures the screen and asks an Ollama vision model for short descriptions.</p>
+	<h2>Commands</h2>
+	<ul>
+		<li>NVDA+Alt+V: Toggle live description.</li>
+		<li>NVDA+Shift+Alt+V: Clear rolling context and restart if active.</li>
+		<li>NVDA+Control+Alt+V: Open Private Eye settings.</li>
+	</ul>
+	<h2>Defaults</h2>
+	<ul>
+		<li>Ollama server: http://localhost:11434</li>
+		<li>Model: gemma4</li>
+		<li>Prompt mode: Automatic, with manual General, Video, and Game modes.</li>
+		<li>General system prompt: configurable in Private Eye settings.</li>
+		<li>Capture interval: 4 seconds</li>
+		<li>Ollama request timeout: 60 seconds</li>
+		<li>Context entries: 8</li>
+	</ul>
+	<h2>Notes</h2>
+	<p>The add-on requires an Ollama server with a vision-capable model. It does not bundle or install Ollama models.</p>
+</body>
+</html>

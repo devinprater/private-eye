@@ -1,0 +1,16 @@
+addon_info = {
+	"addon_name": "liveDescriber",
+	"addon_summary": "Private Eye",
+	"addon_description": "Describes live video or screen content using an Ollama vision model.",
+	"addon_version": "0.2.2",
+	"addon_author": "Devin Prater <r.d.t.prater@gmail.com>",
+	"addon_url": "https://github.com/devinprater/private-eye",
+	"addon_sourceURL": "https://github.com/devinprater/private-eye",
+	"addon_docFileName": "readme.html",
+	"addon_minimumNVDAVersion": "2026.1.0",
+	"addon_lastTestedNVDAVersion": "2026.1.0",
+	"addon_updateChannel": "stable",
+	"addon_license": "GNU General Public License v2 or later",
+	"addon_licenseURL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+	"addon_changelog": "Improve continuity handling so recurring subjects are referenced by prior labels.",
+}

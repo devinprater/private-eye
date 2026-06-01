@@ -1,0 +1,14 @@
+name = {addon_name}
+summary = {addon_summary}
+description = {addon_description}
+version = {addon_version}
+author = {addon_author}
+url = {addon_url}
+sourceURL = {addon_sourceURL}
+docFileName = {addon_docFileName}
+minimumNVDAVersion = {addon_minimumNVDAVersion}
+lastTestedNVDAVersion = {addon_lastTestedNVDAVersion}
+updateChannel = {addon_updateChannel}
+license = {addon_license}
+licenseURL = {addon_licenseURL}
+changelog = {addon_changelog}
