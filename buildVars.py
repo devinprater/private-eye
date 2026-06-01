@@ -1,5 +1,5 @@
 addon_info = {
-	"addon_name": "liveDescriber",
+	"addon_name": "privateEye",
 	"addon_summary": "Private Eye",
 	"addon_description": "Describes live video or screen content using an Ollama vision model.",
 	"addon_version": "0.2.2",

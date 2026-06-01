@@ -8,7 +8,7 @@ from urllib.error import URLError
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location(
 	"ollamaClient",
-	ROOT / "addon" / "globalPlugins" / "liveDescriber" / "ollamaClient.py",
+	ROOT / "addon" / "globalPlugins" / "privateEye" / "ollamaClient.py",
 )
 ollamaClient = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = ollamaClient

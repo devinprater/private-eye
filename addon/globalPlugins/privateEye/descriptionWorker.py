@@ -40,7 +40,7 @@ class DescriptionWorker(threading.Thread):
 		context: DescriptionContext,
 		region=None,
 	):
-		super().__init__(name="LiveDescriberWorker", daemon=True)
+		super().__init__(name="PrivateEyeWorker", daemon=True)
 		self.base_url = normalize_base_url(base_url)
 		self.model = model
 		self.interval = interval

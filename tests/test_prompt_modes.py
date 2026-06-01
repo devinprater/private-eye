@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location(
 	"promptModes",
-	ROOT / "addon" / "globalPlugins" / "liveDescriber" / "promptModes.py",
+	ROOT / "addon" / "globalPlugins" / "privateEye" / "promptModes.py",
 )
 promptModes = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = promptModes
@@ -32,4 +32,3 @@ def test_prompt_selection_returns_expected_prompt():
 	assert promptModes.get_prompt_for_mode(promptModes.PROMPT_MODE_VIDEO, "custom") == promptModes.VIDEO_PROMPT
 	assert promptModes.get_prompt_for_mode(promptModes.PROMPT_MODE_GAME, "custom") == promptModes.GAME_PROMPT
 	assert promptModes.get_prompt_for_mode(promptModes.PROMPT_MODE_GENERAL, "custom") == "custom"
-

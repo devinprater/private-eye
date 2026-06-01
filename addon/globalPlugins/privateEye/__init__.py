@@ -34,7 +34,7 @@ DEFAULT_BASE_URL = "http://localhost:11434"
 DEFAULT_MODEL = "gemma4"
 
 
-config.conf.spec["liveDescriber"] = {
+config.conf.spec["privateEye"] = {
 	"ollamaBaseUrl": f'string(default="{DEFAULT_BASE_URL}")',
 	"model": f'string(default="{DEFAULT_MODEL}")',
 	"promptMode": f'string(default="{PROMPT_MODE_AUTO}")',
@@ -51,7 +51,7 @@ config.conf.spec["liveDescriber"] = {
 
 
 def _settings():
-	return config.conf["liveDescriber"]
+	return config.conf["privateEye"]
 
 
 def _addLabeledItem(sHelper, parent, label, item):
@@ -92,7 +92,7 @@ def _getIntFromText(ctrl, option, minimum, maximum):
 	return number
 
 
-class LiveDescriberSettingsPanel(settingsDialogs.SettingsPanel):
+class PrivateEyeSettingsPanel(settingsDialogs.SettingsPanel):
 	title = "Private Eye"
 
 	def makeSettings(self, settingsSizer):
@@ -240,13 +240,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._unregisterSettingsPanel()
 
 	def _registerSettingsPanel(self):
-		if LiveDescriberSettingsPanel not in settingsDialogs.NVDASettingsDialog.categoryClasses:
-			settingsDialogs.NVDASettingsDialog.categoryClasses.append(LiveDescriberSettingsPanel)
+		if PrivateEyeSettingsPanel not in settingsDialogs.NVDASettingsDialog.categoryClasses:
+		settingsDialogs.NVDASettingsDialog.categoryClasses.append(PrivateEyeSettingsPanel)
 			log.debug("Private Eye settings panel registered")
 
 	def _unregisterSettingsPanel(self):
-		while LiveDescriberSettingsPanel in settingsDialogs.NVDASettingsDialog.categoryClasses:
-			settingsDialogs.NVDASettingsDialog.categoryClasses.remove(LiveDescriberSettingsPanel)
+		while PrivateEyeSettingsPanel in settingsDialogs.NVDASettingsDialog.categoryClasses:
+		settingsDialogs.NVDASettingsDialog.categoryClasses.remove(PrivateEyeSettingsPanel)
 
 	def _makeWorker(self):
 		settings = _settings()
@@ -316,4 +316,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		openSettingsDialog = getattr(gui.mainFrame, "popupSettingsDialog", None)
 		if openSettingsDialog is None:
 			openSettingsDialog = getattr(gui.mainFrame, "_popupSettingsDialog")
-		wx.CallAfter(openSettingsDialog, settingsDialogs.NVDASettingsDialog, LiveDescriberSettingsPanel)
+		wx.CallAfter(openSettingsDialog, settingsDialogs.NVDASettingsDialog, PrivateEyeSettingsPanel)

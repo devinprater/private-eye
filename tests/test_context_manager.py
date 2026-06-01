@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 spec = importlib.util.spec_from_file_location(
 	"contextManager",
-	ROOT / "addon" / "globalPlugins" / "liveDescriber" / "contextManager.py",
+	ROOT / "addon" / "globalPlugins" / "privateEye" / "contextManager.py",
 )
 contextManager = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = contextManager
